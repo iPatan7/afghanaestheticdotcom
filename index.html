@@ -552,6 +552,11 @@
             }
         </style>
     </style>
+
+    <!-- Add these Google Fonts to your <head> section -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body class="font-['Inter']">
     <!-- Main particles container -->
@@ -564,7 +569,7 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0">
                     <a href="#" class="text-white font-bold text-xl">
-                        Afghan Aesthetic
+                        PATAN
                     </a>
                 </div>
 
@@ -589,52 +594,97 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="section-wrapper bg-gradient-to-b from-[#0B1120] to-[#111827]">
-        <div id="particles-js-home" class="particles-container"></div>
-        <div class="content-wrapper">
-            <div class="text-center space-y-8">
-                <!-- Greeting -->
-                <div class="flex justify-center gap-4 items-center">
-                    <span class="h-px w-16 bg-gradient-to-r from-transparent via-blue-400/30 to-transparent"></span>
-                    <span class="text-blue-400 text-sm tracking-[0.2em] font-light">HELLO WORLD</span>
-                    <span class="h-px w-16 bg-gradient-to-r from-transparent via-blue-400/30 to-transparent"></span>
+    <section id="home" class="aws-hero min-h-screen relative overflow-hidden">
+        <!-- Particle Container -->
+        <div id="particleContainer" class="absolute inset-0 pointer-events-none"></div>
+        
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#252A34]/80 via-transparent to-transparent"></div>
+        
+        <!-- Main Content -->
+        <div class="relative z-10 container mx-auto px-4 min-h-screen flex items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
+                <!-- Left Content -->
+                <div class="space-y-10 text-center lg:text-left relative">
+                    <!-- Tech Decorative Element -->
+                    <div class="absolute -top-20 -left-20 w-40 h-40 bg-[#08D9D6]/10 rounded-full blur-3xl"></div>
+                    
+                    <!-- Badge -->
+                    <div class="inline-flex items-center gap-2 backdrop-blur-sm bg-white/5 px-4 py-2 rounded-full">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF2E63] opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-[#FF2E63]"></span>
+                        </span>
+                        <span class="text-sm font-medium text-gray-200 tracking-wide">Computer Science Student</span>
+                    </div>
+
+                    <!-- Main Heading with Tech Gradient Effect -->
+                    <div class="space-y-4">
+                        <h1 class="text-4xl lg:text-6xl font-bold leading-tight">
+                            <div class="tech-intro-wrapper inline-block relative group">
+                                <span class="tech-intro">Hi, I'm</span>
+                                <div class="absolute -inset-1 bg-gradient-to-r from-[#08D9D6]/20 to-[#FF2E63]/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            </div>
+                            <br class="hidden lg:block" />
+                            <div class="aws-name-wrapper inline-block relative group">
+                                <span class="aws-name">Mohammad Iqbal Patan</span>
+                                <div class="absolute -inset-1 bg-gradient-to-r from-[#08D9D6]/20 to-[#FF2E63]/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            </div>
+                        </h1>
+                        
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="grid grid-cols-2 gap-6">
+                        <a href="#connect" class="quick-link-card group">
+                            <div class="flex items-center gap-4 p-5">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-envelope text-lg"></i>
+                                </div>
+                                <div class="text-left">
+                                    <h3 class="font-semibold text-white">Connect With Me</h3>
+                                    <p class="text-sm text-gray-400">Let's get in touch</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#projects" class="quick-link-card group">
+                            <div class="flex items-center gap-4 p-5">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-code-branch text-lg"></i>
+                                </div>
+                                <div class="text-left">
+                                    <h3 class="font-semibold text-white">Projects</h3>
+                                    <p class="text-sm text-gray-400">View my work</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Tech Stack -->
+                    <div class="space-y-4">
+                        <p class="text-gray-400 text-sm uppercase tracking-wider font-medium">Currently Learning</p>
+                        <div class="flex flex-wrap gap-3 justify-center lg:justify-start">
+                            <span class="tech-badge">AWS Cloud</span>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">React</span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Main Heading -->
-                <h1 class="text-4xl md:text-7xl font-bold tracking-tight">
-                    <span class="text-white">Hi, I'm</span>
-                    <br />
-                    <span class="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 text-transparent bg-clip-text animate-gradient">
-                        Mohammad Iqbal Patan
-                    </span>
-                </h1>
-
-                <!-- Role -->
-                <h2 class="text-2xl md:text-3xl text-blue-300 font-medium tracking-wide">
-                    Cloud & DevOps Student
-                </h2>
-
-                <!-- Description -->
-                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-                    Automating the future, one deployment at a time
-                </p>
-
-                <!-- CTA Buttons -->
-                <div class="flex justify-center gap-6 pt-4">
-                    <a href="#contact" 
-                       class="group relative px-8 py-4 bg-blue-500/10 backdrop-blur-sm rounded-lg 
-                              border border-blue-400/20 text-white font-medium text-lg
-                              transition-all duration-300 
-                              hover:bg-blue-500/20 hover:shadow-xl hover:shadow-blue-500/10">
-                        Get in Touch
-                    </a>
-                    <a href="#projects" 
-                       class="px-8 py-4 bg-transparent rounded-lg 
-                              border border-blue-400/30 text-white/80 font-medium text-lg
-                              transition-all duration-300 
-                              hover:bg-blue-500/10 hover:border-blue-400/50">
-                        View Projects
-                    </a>
+                <!-- Right Content -->
+                <div class="flex justify-center lg:justify-end relative">
+                    <!-- Decorative Elements -->
+                    <div class="absolute -top-10 -right-10 w-60 h-60 bg-[#FF2E63]/10 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-[#08D9D6]/10 rounded-full blur-3xl"></div>
+                    
+                    <div class="aws-profile-card relative">
+                        <img src="src/IMG_9021.jpg" 
+                             alt="Mohammad Iqbal Patan" 
+                             class="rounded-2xl w-full max-w-md object-cover h-[500px] shadow-2xl">
+                        <!-- Gradient Border -->
+                        <div class="absolute inset-0 rounded-2xl p-[2px] bg-gradient-to-r from-[#08D9D6]/50 via-[#252A34]/50 to-[#FF2E63]/50 -z-10"></div>
+                    </div>
                 </div>
             </div>
         </div>
